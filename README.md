@@ -1,8 +1,6 @@
 # Pangenome-Iterative-Assembly-Pipeline
 Iterative mapping–assembly pipeline for pangenome construction using short-read data.
 
-# Pangenome Iterative Assembly Pipeline
-
 This repository provides a **Bash-based iterative mapping–assembly pipeline** for constructing a pangenome.  
 It was developed and tested on *Brassica juncea* accessions, but the workflow can be adapted to other species.  
 
