@@ -20,9 +20,6 @@ ASSEMBLY_DIR=$WORKDIR/masurca_assembly
 ASSEMBLED=$WORKDIR/assembled_file
 FILTER_DIR=$WORKDIR/assembled_filtered
 
-THREADS=80
-MEM=100G
-
 ACCESSIONS_LIST=$WORKDIR/accessions_list/accessions_r.txt
 PREV_ACCESSIONS_LIST=$WORKDIR/accessions_list/prev_accessions_r.txt
 
@@ -69,10 +66,10 @@ while IFS= read -r accession && IFS= read -r prev_accession <&3; do
 
     # Step 7: Sort BAM by read name
     SORT_TMP=$(mktemp -d)
-    $SAMTOOLS sort -@ 32 -T "$SORT_TMP" -n ${UNALIGNED_DIR}/${accession}.bam -o ${UNALIGNED_SORTED}/${accession}_sorted.bam
+    $SAMTOOLS sort -@ $THREADS -T "$SORT_TMP" -n ${UNALIGNED_DIR}/${accession}.bam -o ${UNALIGNED_SORTED}/${accession}_sorted.bam
 
     # Step 8: Convert BAM → FASTQ
-    $SAMTOOLS fastq -@ 32 \
+    $SAMTOOLS fastq -@ $THREADS \
         -1 ${UNALIGNED_FASTQ}/${accession}_R1.fastq \
         -2 ${UNALIGNED_FASTQ}/${accession}_R2.fastq \
         -0 ${UNALIGNED_FASTQ}/${accession}_unpaired.fastq \
