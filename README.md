@@ -1,4 +1,4 @@
-# Pangenome-Iterative-Assembly-Pipeline
+# Pangenome Iterative Assembly Pipeline
 Iterative mapping–assembly pipeline for pangenome construction using short-read data.
 
 This repository provides a **Bash-based iterative mapping–assembly pipeline** for constructing a pangenome.  
