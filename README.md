@@ -42,3 +42,11 @@ Install the following tools and ensure they are available in your `$PATH`:
 
 ---
 
+## 🛠️ Pipeline Script
+
+The iterative pangenome assembly pipeline is provided as `iterative_pangenome.sh`.  
+It contains the full Bash workflow for mapping, extracting unaligned reads, iterative assembly, and contig filtering.
+
+Before running, update configuration variables at the top of the script to match your directories and tool paths.
+
+
