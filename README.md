@@ -3,9 +3,7 @@ Iterative mapping–assembly pipeline for pangenome construction using short-rea
 
 This repository provides a **Bash-based iterative mapping–assembly pipeline** for constructing a pangenome.  
 It was developed and tested on *Brassica juncea* accessions, but the workflow can be adapted to other species.  
-
----
-
+![Pangenome pipeline](https://github.com/user-attachments/assets/f5a7f129-4b9f-42cd-9fe7-8eccf427bd9d)
 ## 🚀 Features
 - Iterative reference updating with unaligned reads  
 - Read mapping using **Bowtie2**  
